@@ -96,7 +96,7 @@ namespace ProgradWeek2_Assesment
         {
             Console.WriteLine(TimeToProcessLicensePlate("Eric", 2, "Adam Caroline Rebecca Frank"));
             Console.WriteLine(TimeToProcessLicensePlate("Zebediah", 1, "Bob Jim Becky Pat"));
-            Console.WriteLine(TimeToProcessLicensePlate("Aaron", 3, "Jane Max Olivia Sam"))
+            Console.WriteLine(TimeToProcessLicensePlate("Aaron", 3, "Jane Max Olivia Sam"));
         }
 
         static void Main(string[] args)
