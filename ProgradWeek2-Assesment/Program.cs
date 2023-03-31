@@ -57,9 +57,37 @@ namespace ProgradWeek2_Assesment
             Console.WriteLine(ReorderedDMVNumber("2-4A0r7-4k", 3));
             Console.WriteLine(ReorderedDMVNumber("nlj-206-fv", 3));
         }
+        static int TimeToProcessLicensePlate(string CustomerName,int NumberOfAgents,string ReminingPeople)
+        {
+            List<string> customers = ReminingPeople.Split().ToList();
+            customers.Add(CustomerName);
+            customers.Sort();
+            int Index = 1;
+            foreach(string customer in customers)
+            {
+                if(customer == CustomerName)
+                {
+                    Index++;
+                    break;
+                }
+                Index++;
+            }
+            return (Index> NumberOfAgents?Index / NumberOfAgents:1)*20;
+        }
+        static void TimeToProcessLicensePlateRun()
+        {
+            Console.WriteLine(TimeToProcessLicensePlate("Eric", 2, "Adam Caroline Rebecca Frank"));
+            Console.WriteLine(TimeToProcessLicensePlate("Zebediah", 1, "Bob Jim Becky Pat"));
+            Console.WriteLine(TimeToProcessLicensePlate("Aaron", 3, "Jane Max Olivia Sam"));
+
+        }
+
         static void Main(string[] args)
         {
-            LicencePlateRun();
+            //LicencePlateRun();
+            TimeToProcessLicensePlateRun();
+
+            
         }
     }
 }
